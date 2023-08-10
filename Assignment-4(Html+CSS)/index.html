@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Project-4</title>
+    <style>
+       *{
+        padding: 0;
+        margin: 0;
+       }
+       body{
+        height: 100vh;
+        background-color: aquamarine;
+       }
+       h1{
+        font-size: 50px;
+        text-align: center;
+       }
+       .screenstyle{
+        font-size: 40px;
+        text-align: center;
+        display: none;
+       }
+       /* Media Query for big screen */
+
+       @media screen and (max-width: 1440px){
+            .bigScreen{
+                display: block;
+            }
+            body{
+                background-color: forestgreen;
+            }
+        }
+        /* Media query for laptop screen */
+        @media screen and (max-width: 1024px){
+            .laptopScreen{
+                display: block;
+            }
+            .bigScreen{
+                display: none;
+            }
+            body{
+                background-color: darkgoldenrod;
+            }
+        }
+        /* Media Query for tablet screen */
+       @media screen and (max-width: 768px){
+            .tabletScreen{
+                display: block;
+            }
+            .bigScreen{
+                display: none;
+            }
+            .laptopScreen{
+                display: none;
+            }
+            body{
+                background-color: aqua;
+            }
+        } 
+        /* Media Query for mobile screen */
+        @media screen and (max-width: 425px){
+            .mobileScreen{
+                display: block;
+            }
+            .bigScreen{
+                display: none;
+            }
+            .laptopScreen , .tabletScreen{
+                display: none;
+            }
+            body{
+                background-color: crimson;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <h1>This is a Media Query demo page.</h1>
+    <div class="bigScreen screenstyle"> Screen size : 1440px </div>
+    <div class="laptopScreen screenstyle"> Screen size : 1024px </div>
+    <div class="tabletScreen screenstyle"> Screen size : 768px </div>
+    <div class="mobileScreen screenstyle"> Screen size : 425px </div>
+</body>
+</html>
